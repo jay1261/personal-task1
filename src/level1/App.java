@@ -52,6 +52,14 @@ public class App {
                 list.remove(0);
             }
 
+            System.out.println("저장된 연산결과를 조회하시겠습니까? (inquiry 입력 시 조회)");
+            String inquiryStr = sc.nextLine();
+            if(inquiryStr.equals("inquiry")){
+                for(Double v: list){
+                    System.out.println(v);
+                }
+            }
+
             System.out.print("더 계산하시겠습니까? (exit 입력 시 종료): ");
             String answer = sc.nextLine();
             if (answer.equals("exit")){
