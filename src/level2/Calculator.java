@@ -35,4 +35,9 @@ public class Calculator {
         /* return 연산 결과 */
         return result;
     }
+
+    public void removeResult() {
+        /* 구현 */
+        this.list.remove(0);
+    }
 }

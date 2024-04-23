@@ -25,7 +25,9 @@ public class App {
             /* 위 요구사항에 맞게 소스 코드 수정 */
             try {
                 double result = calculator.calculate(num1, num2, operator);
-                System.out.println(result);
+                if (calculator.getList().size() > 10){
+                    calculator.removeResult();
+                }
                 calculator.getList().add(result);
                 System.out.println(calculator.getList());
 
