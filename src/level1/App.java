@@ -1,12 +1,15 @@
 package level1;
 
+import java.util.LinkedList;
+import java.util.List;
 import java.util.Scanner;
 
 public class App {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        double[] arr = new double[10];
-        int index = 0;
+//        double[] arr = new double[10];
+//        int index = 0;
+        List<Double> list = new LinkedList<>();
 
         while (true) {
             System.out.print("첫 번째 숫자를 입력하세요: ");
@@ -34,14 +37,15 @@ public class App {
             };
             System.out.println("결과: " + result);
 
-            if (index >= 9){
-                for (int i = 0; i < 9; i++) {
-                    arr[i] = arr[i+1];
-                }
-                arr[9] = result;
-            } else {
-                arr[index++] = result;
-            }
+//            if (index >= 9){
+//                for (int i = 0; i < 9; i++) {
+//                    arr[i] = arr[i+1];
+//                }
+//                arr[9] = result;
+//            } else {
+//                arr[index++] = result;
+//            }
+            list.add(result);
 
             System.out.print("더 계산하시겠습니까? (exit 입력 시 종료): ");
             String answer = sc.nextLine();
