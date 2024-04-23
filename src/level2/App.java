@@ -6,7 +6,8 @@ import java.util.Scanner;
 public class App {
     public static void main(String[] args) {
         /* Calculator 인스턴스 생성 */
-        Calculator calculator = new Calculator();
+        ArithmeticCalculator calculator = new ArithmeticCalculator();
+        CircleCalculator circleCalculator = new CircleCalculator();
 
         Scanner sc = new Scanner(System.in);
 
@@ -40,9 +41,10 @@ public class App {
             else if(mode.equals("2")){
                 System.out.print("반지름을 입력하세요:");
                 int radius = sc.nextInt();
-                double result = calculator.calculateCircleArea(radius);
-                calculator.getCircleList().add(result);
-                calculator.inquiryCircleAreas();
+                sc.nextLine();
+                double result = circleCalculator.calculateCircleArea(radius);
+                circleCalculator.getList().add(result);
+                circleCalculator.inquiryResults();
             }
 
             System.out.println("더 계산하시겠습니까? (exit 입력 시 종료)");
