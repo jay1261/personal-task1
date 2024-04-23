@@ -1,8 +1,9 @@
 package level2;
 
-public class MultiPlyOperator implements Operator{
+public class ModOperator implements Operator{
+
     @Override
     public double operate(int firstNum, int secondNum) {
-        return firstNum * secondNum;
+        return firstNum % secondNum;
     }
 }
