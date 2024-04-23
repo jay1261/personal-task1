@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class App {
     public static void main(String[] args) {
         /* Calculator 인스턴스 생성 */
-        Calculator calculator = new Calculator();
+        Calculator calculator = new Calculator(new ArrayList<>());
 
         Scanner sc = new Scanner(System.in);
 
@@ -26,8 +26,8 @@ public class App {
             try {
                 double result = calculator.calculate(num1, num2, operator);
                 System.out.println(result);
-                calculator.list.add(result);
-                System.out.println(calculator.list);
+                calculator.getList().add(result);
+                System.out.println(calculator.getList());
 
             } catch (Exception e) {
                 System.out.println(e);
