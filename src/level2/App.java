@@ -29,8 +29,7 @@ public class App {
                     calculator.removeResult();
                 }
                 calculator.getList().add(result);
-                System.out.println(calculator.getList());
-
+                calculator.inquiryResults();
             } catch (Exception e) {
                 System.out.println(e);
             }

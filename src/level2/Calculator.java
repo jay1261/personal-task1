@@ -40,4 +40,9 @@ public class Calculator {
         /* 구현 */
         this.list.remove(0);
     }
+
+    public void inquiryResults() {
+        /* 구현 */
+        System.out.println(this.list);
+    }
 }
