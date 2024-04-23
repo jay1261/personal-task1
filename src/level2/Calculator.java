@@ -1,7 +1,10 @@
 package level2;
 
+import java.util.ArrayList;
+
 public class Calculator {
     /* 연산 결과를 저장하는 컬렉션 타입 필드 선언 및 생성 */
+    public ArrayList<Double> list = new ArrayList<>();
 
     public double calculate(int firstNum, int secondNum, String operator) throws Exception {
         /* 위 요구사항에 맞게 구현 */
