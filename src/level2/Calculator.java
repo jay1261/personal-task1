@@ -3,11 +3,14 @@ package level2;
 import java.util.ArrayList;
 
 public class Calculator {
-    /* 연산 결과를 저장하는 컬렉션 타입 필드 선언 및 생성 */
+    public static final double PI = 3.14; // 상수로 사용
+
     private ArrayList<Double> list;
+    private ArrayList<Double> circleList;
 
     public Calculator() {
         this.list = new ArrayList<>();
+        this.circleList = new ArrayList<>();
     }
 
     public ArrayList<Double> getList() {
@@ -16,6 +19,14 @@ public class Calculator {
 
     public void setList(ArrayList<Double> list) {
         this.list = list;
+    }
+
+    public ArrayList<Double> getCircleList() {
+        return circleList;
+    }
+
+    public void setCircleList(ArrayList<Double> circleList) {
+        this.circleList = circleList;
     }
 
     public double calculate(int firstNum, int secondNum, String operator) throws Exception {
@@ -44,5 +55,14 @@ public class Calculator {
     public void inquiryResults() {
         /* 구현 */
         System.out.println(this.list);
+    }
+
+    public double calculateCircleArea(double radius) {
+        /* 원의 넓이 계산 구현 */
+        return PI * radius * radius;
+    }
+    public void inquiryCircleAreas() {
+        /* 구현 */
+        System.out.println(this.circleList);
     }
 }
