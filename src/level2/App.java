@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class App {
     public static void main(String[] args) {
         /* Calculator 인스턴스 생성 */
-        Calculator calculator = new Calculator(new ArrayList<>());
+        Calculator calculator = new Calculator();
 
         Scanner sc = new Scanner(System.in);
 

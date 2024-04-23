@@ -6,8 +6,8 @@ public class Calculator {
     /* 연산 결과를 저장하는 컬렉션 타입 필드 선언 및 생성 */
     private ArrayList<Double> list;
 
-    public Calculator(ArrayList<Double> list) {
-        this.list = list;
+    public Calculator() {
+        this.list = new ArrayList<>();
     }
 
     public ArrayList<Double> getList() {
