@@ -33,8 +33,16 @@ public class App {
                 default -> 0;
             };
             System.out.println("결과: " + result);
-            arr[index++] = result;
-            
+
+            if (index >= 9){
+                for (int i = 0; i < 9; i++) {
+                    arr[i] = arr[i+1];
+                }
+                arr[9] = result;
+            } else {
+                arr[index++] = result;
+            }
+
             System.out.print("더 계산하시겠습니까? (exit 입력 시 종료): ");
             String answer = sc.nextLine();
             if (answer.equals("exit")){
