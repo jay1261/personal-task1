@@ -13,4 +13,7 @@ public class ArithmeticCalculator extends Calculator {
         return operator.operate(firstNum.doubleValue(), secondNum.doubleValue());
     }
 
+    public void printBiggerThanInput(double input){
+        System.out.println(this.getList().stream().filter(x->x>input).toList());
+    }
 }

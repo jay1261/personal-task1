@@ -12,14 +12,15 @@ public class App {
 
         /* 반복문 시작 */
         while (true) {
-            System.out.print("원하는 계산을 선택해주세요 1. 사칙연산, 2. 원의 넓이");
+            System.out.println("원하는 계산을 선택해주세요");
+            System.out.print("1. 사칙연산, 2. 원의 넓이, 3 사칙연산 결과 조회: ");
             String mode = sc.nextLine();
 
             // 사칙연산
             if (mode.equals("1")) {
-                System.out.print("첫 번째 숫자를 입력하세요:");
+                System.out.print("첫 번째 숫자를 입력하세요: ");
                 double num1 = sc.nextDouble();
-                System.out.print("두 번째 숫자를 입력하세요:");
+                System.out.print("두 번째 숫자를 입력하세요: ");
                 double num2 = sc.nextDouble();
                 sc.nextLine();
 
@@ -39,7 +40,7 @@ public class App {
             }
             // 원의 넓이
             else if(mode.equals("2")){
-                System.out.print("반지름을 입력하세요:");
+                System.out.print("반지름을 입력하세요: ");
                 int radius = sc.nextInt();
                 sc.nextLine();
                 double result = circleCalculator.calculateCircleArea(radius);
@@ -47,7 +48,14 @@ public class App {
                 circleCalculator.inquiryResults();
             }
 
-            System.out.println("더 계산하시겠습니까? (exit 입력 시 종료)");
+            else if(mode.equals("3")){
+                System.out.print("n보다 큰 결과들을 조회합니다. 숫자 n을 입력해주세요: ");
+                double input = sc.nextDouble();
+                calculator.printBiggerThanInput(input);
+                sc.nextLine();
+            }
+
+            System.out.println("더 계산하시겠습니까? (exit 입력 시 종료): ");
             String exitRequest = sc.nextLine();
             if (exitRequest.equals("exit")) {
                 break;
