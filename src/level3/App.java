@@ -15,17 +15,17 @@ public class App {
             System.out.print("원하는 계산을 선택해주세요 1. 사칙연산, 2. 원의 넓이");
             String mode = sc.nextLine();
 
+            // 사칙연산
             if (mode.equals("1")) {
                 System.out.print("첫 번째 숫자를 입력하세요:");
-                int num1 = sc.nextInt();
+                double num1 = sc.nextDouble();
                 System.out.print("두 번째 숫자를 입력하세요:");
-                int num2 = sc.nextInt();
+                double num2 = sc.nextDouble();
                 sc.nextLine();
 
                 System.out.print("사칙연산 기호를 입력하세요: ");
                 String operator = sc.nextLine();
 
-                /* 위 요구사항에 맞게 소스 코드 수정 */
                 try {
                     double result = calculator.calculate(num1, num2, operator);
                     if (calculator.getList().size() > 10) {
@@ -37,6 +37,7 @@ public class App {
                     System.out.println(e);
                 }
             }
+            // 원의 넓이
             else if(mode.equals("2")){
                 System.out.print("반지름을 입력하세요:");
                 int radius = sc.nextInt();
