@@ -24,13 +24,13 @@ public enum OperatorType {
         return operator;
     }
 
-    public Operator matchOperator(String operatorSign) throws Exception {
+    public static Operator matchOperator(String operatorSign) throws Exception {
         return switch (operatorSign) {
-            case "+" -> new AddOperator();
-            case "-" -> new SubstractOperator();
-            case "*" -> new MultiPlyOperator();
-            case "/" -> new DivideOperator();
-            case "%" -> new ModOperator();
+            case "+" -> ADD.operator;
+            case "-" -> SUBSTRACT.operator;
+            case "*" -> MULTIPLY.operator;
+            case "/" -> DIVIDE.operator;
+            case "%" -> MOD.operator;
             default -> throw new Exception("잘못된 연산자입니다.");
         };
     }
